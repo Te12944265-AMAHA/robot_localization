@@ -40,7 +40,7 @@ int main(int argc, char **argv)
 {
   ros::init(argc, argv, "ekf_navigation_node");
 
-  ros::NodeHandle nh;
+  ros::NodeHandle nh("/diffbot");
   ros::NodeHandle nh_priv("~");
 
   RobotLocalization::RosEkf ekf(nh, nh_priv);
